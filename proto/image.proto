@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "basic_types.proto";
+
+package proto;
+
+message image 
+{
+	ivec2 size = 1;
+	bytes data = 2;
+}
