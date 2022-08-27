@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "basic_types.proto";
+
+package proto;
+
+message transform
+{
+	optional float time           = 1;
+	optional fvec3 position       = 2;
+	optional fvec3 rotation_euler = 3;
+	optional bool  look_at_origin = 4;
+}

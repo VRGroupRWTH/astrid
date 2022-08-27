@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package proto;
+
+message projection
+{
+	optional string type            = 1;
+	optional float  y_field_of_view = 2;
+	optional float  focal_length    = 3;
+	optional float  height          = 4;
+	optional float  near_clip       = 5;
+	optional float  far_clip        = 6;
+}

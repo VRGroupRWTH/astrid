@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "basic_types.proto";
+import "bounds.proto";
+import "image.proto";
+import "projection.proto";
+import "transform.proto";
+
+package proto;
+
+message request 
+{
+	optional string     metric                      = 1;
+	repeated float      metric_parameters           = 2;  // Not implemented.
+	optional string     tableau                     = 3;  // Not implemented.
+	optional string     error_controller            = 4;  // Not implemented.
+	repeated float      error_controller_parameters = 5;  // Not implemented.
+
+	optional ivec2      image_size                  = 6;
+	optional uint64     iterations                  = 7;
+	optional float      lambda_step_size            = 8;
+	optional float      lambda                      = 9;
+	optional bounds     bounds                      = 10;
+
+	optional transform  transform                   = 11;
+	optional projection projection                  = 12;  
+	optional image      background_image            = 13; 
+
+	optional bool       debug                       = 14;
+	optional bool       terminate                   = 15;
+}

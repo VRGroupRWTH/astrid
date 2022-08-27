@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "basic_types.proto";
+
+package proto;
+
+message bounds
+{
+	fvec4 lower = 1;
+	fvec4 upper = 2;
+}
